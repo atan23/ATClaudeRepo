@@ -28,8 +28,11 @@ A full-stack book recommendations app with Google login, reading platform integr
 ### 1. Install dependencies
 
 ```bash
-cd backend && npm install
-cd ../frontend && npm install
+# Backend (--no-workspaces avoids npm workspace hoisting issues)
+cd backend && npm install --no-workspaces
+
+# Frontend
+cd ../frontend && npm install --no-workspaces
 ```
 
 ### 2. Configure backend
