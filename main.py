@@ -55,15 +55,10 @@ def search(companies):
         border_style="cyan"
     ))
 
-    table = Table(box=box.ROUNDED, show_header=True, header_style="bold magenta")
-    table.add_column("#", style="dim", width=4)
-    table.add_column("Description", style="white", min_width=35)
-    table.add_column("URL", style="blue", overflow="fold", min_width=60)
-
     for i, item in enumerate(urls, 1):
-        table.add_row(str(i), item["description"], item["url"])
+        console.print(f"\n[bold white]{i}.[/bold white] [yellow]{item['description']}[/yellow]")
+        console.print(f"   [blue]{item['url']}[/blue]")
 
-    console.print(table)
     console.print(f"\n[green]Total: {len(urls)} search URLs[/green]")
 
 
@@ -80,15 +75,9 @@ def jobs(companies):
         border_style="cyan"
     ))
 
-    table = Table(box=box.ROUNDED, show_header=True, header_style="bold magenta")
-    table.add_column("#", style="dim", width=4)
-    table.add_column("Description", style="white", min_width=40)
-    table.add_column("URL", style="blue", overflow="fold", min_width=60)
-
     for i, item in enumerate(urls, 1):
-        table.add_row(str(i), item["description"], item["url"])
-
-    console.print(table)
+        console.print(f"\n[bold white]{i}.[/bold white] [yellow]{item['description']}[/yellow]")
+        console.print(f"   [blue]{item['url']}[/blue]")
 
 
 @cli.command()
