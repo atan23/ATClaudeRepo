@@ -1,0 +1,22 @@
+# Google API credentials - NEVER commit these
+credentials.json
+service_account.json
+token.json
+*.json
+
+# Allow example files
+!*example*.json
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
